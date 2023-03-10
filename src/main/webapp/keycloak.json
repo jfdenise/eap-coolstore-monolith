@@ -1,6 +1,6 @@
 {
   "realm": "eap",
-  "auth-server-url": "https://keycloak:8443",
+  "auth-server-url": "https://keycloak-eap.apps.cluster-nfblr.nfblr.sandbox230.opentlc.com/auth/",
   "ssl-required": "external",
   "resource": "eap-app",
   "public-client": true,
