@@ -180,3 +180,20 @@ If you perform a test checkout of an item, you should see both nodes processing 
 
 
 ```
+
+
+Install RH SSO operator and deploy RH SSO instance with sso-instance.yml, then sso-realm.yml, sso-client.yml, and sso-user.yml
+
+
+
+Deploy postgres with following fields
+
+DATABASE: "postgresDB"
+NAME: "postgresql"
+USERNAME: "postgresDB"
+PASSWORD: "postgresPW"
+
+Create config map from cm.yaml
+
+Deploy EA74 helm chart with helm.yml
+

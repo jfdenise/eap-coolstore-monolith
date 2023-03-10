@@ -1,0 +1,22 @@
+kind: KeycloakClient
+apiVersion: keycloak.org/v1alpha1
+metadata:
+  name: eap-app
+  labels:
+    app: sso
+  namespace: eap
+spec:
+  realmSelector:
+    matchLabels:
+      app: sso
+  client:
+    redirectUris:
+      - '*'
+    webOrigins:
+      - '*'
+    clientId: eap-app
+    secret: client-secret
+    clientAuthenticatorType: client-secret
+    enabled: true
+    publicClient: true
+    standardFlowEnabled: true

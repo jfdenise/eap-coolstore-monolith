@@ -1,0 +1,16 @@
+kind: KeycloakRealm
+apiVersion: keycloak.org/v1alpha1
+metadata:
+  name: eap-realm
+  namespace: eap
+  labels:
+    app: sso
+spec:
+  realm:
+    id: eap
+    realm: eap
+    enabled: true
+    displayName: Basic Realm
+  instanceSelector:
+    matchLabels:
+      app: sso
