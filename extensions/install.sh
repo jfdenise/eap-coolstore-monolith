@@ -9,4 +9,4 @@ fi
 injected_dir=$1
 source /usr/local/s2i/install-common.sh
 configure_drivers ${injected_dir}/drivers.env
-cp -rf ${injected_dir} $JBOSS_HOME/extensions
+#cp -rf ${injected_dir} $JBOSS_HOME/extensions

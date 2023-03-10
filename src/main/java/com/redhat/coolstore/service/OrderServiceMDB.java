@@ -11,6 +11,18 @@ import javax.jms.TextMessage;
 import com.redhat.coolstore.model.Order;
 import com.redhat.coolstore.utils.Transformers;
 import weblogic.i18n.logging.NonCatalogLogger;
+import javax.jms.JMSDestinationDefinition;
+import javax.jms.JMSDestinationDefinitions;
+
+@JMSDestinationDefinitions(
+    value = {
+        @JMSDestinationDefinition(
+            name = "java:/topic/orders",
+            interfaceName = "javax.jms.Topic",
+            destinationName = "topic/orders"
+        )
+    }
+)
 
 @MessageDriven(name = "OrderServiceMDB", activationConfig = {
 	@ActivationConfigProperty(propertyName = "destinationLookup", propertyValue = "topic/orders"),
