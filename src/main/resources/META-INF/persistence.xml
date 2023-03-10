@@ -9,6 +9,7 @@
         <properties>
             <property name="javax.persistence.schema-generation.database.action" value="none"/>
             <property name="hibernate.show_sql" value="false" />
+            <property name="hibernate.dialect" value="PostgreSQLDialect" />
         </properties>
     </persistence-unit>
 </persistence>
