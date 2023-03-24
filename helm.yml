@@ -6,8 +6,6 @@ build:
   output:
     kind: ImageStreamTag
   env:
-    - name: CUSTOM_INSTALL_DIRECTORIES
-      value: extensions
     - name: GALLEON_PROVISION_FEATURE_PACKS
       value: "org.jboss.eap:eap-datasources-galleon-pack:7.4.0.GA-redhat-00003"
     - name: GALLEON_PROVISION_LAYERS
