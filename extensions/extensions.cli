@@ -1,0 +1,5 @@
+
+
+jms-topic add --topic-address=topic.orders --entries=topic/orders
+/subsystem=messaging-activemq/server=default:write-attribute(name=cluster-password, value=password)
+quit
