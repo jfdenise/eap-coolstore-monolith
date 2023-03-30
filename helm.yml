@@ -12,6 +12,8 @@ build:
       value: "cloud-server,postgresql-datasource"
     - name: POSTGRESQL_DRIVER_VERSION
       value: "42.2.19"
+    - name: CUSTOM_INSTALL_DIRECTORIES
+      value: extensions
   s2i:
     arch: amd64
     jdk: '11'
