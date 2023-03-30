@@ -12,3 +12,4 @@ data:
   POSTGRESQL_PASSWORD: "postgresPW"
   POSTGRESQL_URL: "jdbc:postgresql://postgresql:5432/"
   POSTGRESQL_NONXA: "true"
+  MQ_SERVICE_PREFIX_MAPPING: "eap74-amq=MQ"
