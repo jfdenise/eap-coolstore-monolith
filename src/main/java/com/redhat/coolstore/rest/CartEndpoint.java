@@ -28,7 +28,7 @@ import com.redhat.coolstore.service.ShoppingCartService;
 @JMSDestinationDefinitions(
 	value = {
 		@JMSDestinationDefinition(
-			name = "java:/jms/queue/orders",
+			name = "java:/queue/orders",
 			interfaceName = "javax.jms.Queue",
 			destinationName = "ordersQueue"
 		)
