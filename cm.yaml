@@ -9,6 +9,7 @@ data:
   POSTGRESQL_DRIVER: "postgresql"
   POSTGRESQL_DATASOURCE: "CoolstoreDS"
   POSTGRESQL_USER: "postgresDB"
+  POSTGRESQL_USERNAME: "postgresDB"
   POSTGRESQL_PASSWORD: "postgresPW"
   POSTGRESQL_URL: "jdbc:postgresql://postgresql:5432/"
   POSTGRESQL_NONXA: "true"
