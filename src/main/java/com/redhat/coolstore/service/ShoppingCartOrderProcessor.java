@@ -9,6 +9,7 @@ import javax.jms.Topic;
 
 import com.redhat.coolstore.model.ShoppingCart;
 import com.redhat.coolstore.utils.Transformers;
+import javax.jms.JMSConnectionFactory;
 
 @Stateless
 public class ShoppingCartOrderProcessor  {
@@ -18,7 +19,8 @@ public class ShoppingCartOrderProcessor  {
 
 
     @Inject
-    private transient JMSContext context;
+    @JMSConnectionFactory("java:/ConnectionFactory")
+    JMSContext context;
 
     @Resource(lookup = "java:/topic/orders")
     private Topic ordersTopic;

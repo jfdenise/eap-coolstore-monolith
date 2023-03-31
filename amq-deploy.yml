@@ -1,0 +1,18 @@
+apiVersion: broker.amq.io/v1beta1
+kind: ActiveMQArtemis
+metadata:
+  name: eap74-amq
+spec:
+  acceptors:
+    - name: my-acceptor
+      port: 5672
+      protocols: 'amqp,openwire'
+  deploymentPlan:
+    image: placeholder
+    jolokiaAgentEnabled: false
+    journalType: nio
+    managementRBACEnabled: true
+    messageMigration: false
+    persistenceEnabled: false
+    requireLogin: false
+    size: 2
