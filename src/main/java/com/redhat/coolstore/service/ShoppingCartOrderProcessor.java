@@ -9,7 +9,10 @@ import javax.jms.Topic;
 
 import com.redhat.coolstore.model.ShoppingCart;
 import com.redhat.coolstore.utils.Transformers;
-import javax.jms.JMSConnectionFactory;
+
+import javax.jms.Connection;
+import javax.jms.ConnectionFactory;
+
 
 @Stateless
 public class ShoppingCartOrderProcessor  {
@@ -19,8 +22,9 @@ public class ShoppingCartOrderProcessor  {
 
 
     @Inject
-    @JMSConnectionFactory("java:/ConnectionFactory")
-    JMSContext context;
+    @Resource(lookup = "java:/topic/orders")
+    private ConnectionFactory cf;
+
 
     @Resource(lookup = "java:/topic/orders")
     private Topic ordersTopic;
@@ -28,6 +32,7 @@ public class ShoppingCartOrderProcessor  {
     
   
     public void  process(ShoppingCart cart) {
+        JMSContext context = cf.createContext();
         log.info("Sending order from processor: ");
         context.createProducer().send(ordersTopic, Transformers.shoppingCartToJson(cart));
     }
