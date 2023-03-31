@@ -25,15 +25,7 @@ import com.redhat.coolstore.service.ShoppingCartService;
 
 @SessionScoped
 @Path("/cart")
-@JMSDestinationDefinitions(
-	value = {
-		@JMSDestinationDefinition(
-			name = "java:/queue/orders",
-			interfaceName = "javax.jms.Queue",
-			destinationName = "ordersQueue"
-		)
-	}
-)
+
 public class CartEndpoint implements Serializable {
 
 	private static final long serialVersionUID = -7227732980791688773L;

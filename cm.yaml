@@ -20,5 +20,4 @@ data:
   MQ_USERNAME: "p8zim8JZ"
   MQ_PASSWORD: "DBSmrHRo"
   MQ_TOPICS: "orders"
-  MQ_QUEUES: "orders"
   MQ_JNDI: "java:/ConnectionFactory"
