@@ -12,6 +12,7 @@ data:
   POSTGRESQL_USERNAME: "postgresDB"
   POSTGRESQL_PASSWORD: "postgresPW"
   POSTGRESQL_URL: "jdbc:postgresql://postgresql:5432/"
+  POSTGRESQL_JNDI: "java:jboss/datasources/CoolstoreDS"
   POSTGRESQL_NONXA: "true"
   MQ_SERVICE_PREFIX_MAPPING: "eap74-amq=MQ"
   EAP74_AMQ_TCP_SERVICE_HOST: "eap74-amq-hdls-svc"

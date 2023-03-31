@@ -13,7 +13,7 @@ import com.redhat.coolstore.utils.Transformers;
 import weblogic.i18n.logging.NonCatalogLogger;
 
 @MessageDriven(name = "OrderServiceMDB", activationConfig = {
-	@ActivationConfigProperty(propertyName = "destinationLookup", propertyValue = "java:/topic/orders"),
+	@ActivationConfigProperty(propertyName = "destinationLookup", propertyValue = "topic/orders"),
 	@ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Topic"),
 	@ActivationConfigProperty(propertyName = "acknowledgeMode", propertyValue = "Auto-acknowledge")})
 public class OrderServiceMDB implements MessageListener { 
