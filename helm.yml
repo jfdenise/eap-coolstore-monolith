@@ -6,12 +6,12 @@ build:
   output:
     kind: ImageStreamTag
   env:
-    - name: GALLEON_PROVISION_FEATURE_PACKS
-      value: "org.jboss.eap:eap-datasources-galleon-pack:7.4.0.GA-redhat-00003"
-    - name: GALLEON_PROVISION_LAYERS
-      value: "cloud-server,postgresql-datasource"
-    - name: POSTGRESQL_DRIVER_VERSION
-      value: "42.2.19"
+    # - name: GALLEON_PROVISION_FEATURE_PACKS
+    #   value: "org.jboss.eap:eap-datasources-galleon-pack:7.4.0.GA-redhat-00003"
+    # - name: GALLEON_PROVISION_LAYERS
+    #   value: "cloud-server,postgresql-datasource"
+    # - name: POSTGRESQL_DRIVER_VERSION
+    #   value: "42.2.19"
     - name: CUSTOM_INSTALL_DIRECTORIES
       value: extensions
   s2i:
