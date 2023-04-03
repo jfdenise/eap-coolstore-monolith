@@ -33,3 +33,4 @@ Create config map from cm.yaml
 
 Deploy EA74 helm chart with helm.yml
 
+cat /opt/eap/standalone/configuration/standalone-openshift.xml

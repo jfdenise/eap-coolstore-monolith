@@ -21,14 +21,14 @@ public class ShoppingCartOrderProcessor  {
     private transient JMSContext context;
 
     @Resource(lookup = "java:/topic/orders")
-    private Topic ordersTopic;
+    private Topic ordersTopics;
 
     
   
     public void  process(ShoppingCart cart) {
 
         log.info("Sending order from processor: ");
-        context.createProducer().send(ordersTopic, Transformers.shoppingCartToJson(cart));
+        context.createProducer().send(ordersTopics, Transformers.shoppingCartToJson(cart));
     }
 
 

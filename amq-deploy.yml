@@ -1,7 +1,7 @@
 apiVersion: broker.amq.io/v1beta1
 kind: ActiveMQArtemis
 metadata:
-  name: eap74-amq
+  name: eap74-amq7
 spec:
   acceptors:
     - name: my-acceptor
@@ -16,3 +16,5 @@ spec:
     persistenceEnabled: false
     requireLogin: false
     size: 2
+  console:
+    expose: true
