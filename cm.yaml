@@ -19,5 +19,5 @@ data:
   EAP74_AMQ_TCP_SERVICE_PORT: "61616"
   MQ_USERNAME: "Mf7L1Sj9"
   MQ_PASSWORD: "Q8twbO9U"
-  MQ_QUEUES: "orders"
-  AMQ_JNDI: "java:/ConnectionFactory"
+  MQ_TOPICS: "orders"
+  AMQ_JNDI: "java:/eap74-amq7/ConnectionFactory"
