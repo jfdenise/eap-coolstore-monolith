@@ -17,7 +17,7 @@ This repository has the complete coolstore monolith built as a Java EE 7 applica
 
 ## Deploy RH SSO instance
 
-Wait for RH Operator to be deployed.
+Wait for RH SSO Operator to be deployed.
 
 `oc apply -f sso-instance.yml`
 
@@ -25,9 +25,7 @@ Wait for RH Operator to be deployed.
 
 `oc apply -f sso-config.yml`
 
-
 Run `oc get route keycloak` and update KEYCLOAK_URL value in cm.yaml with correct route for SSO, may take a few attempts for route to be created.
-
 
 ## Deploy postgreSQL database
 
@@ -53,12 +51,11 @@ Create config map from cm.yaml
 
 From the developer UI, click on "+Add", then "Helm Chart", and select the "Eap74" Helm chart.
 
-
 Paste the contents of "helm.yml" as the config.
 
 ## Testing the application
 
-Once the application is running you should be able to access it via the external route. From the application, click on "Sign in" link at the top right hand corner.  You should be brought to the RH SSO login, login as user1/pass
+Once the application is running you should be able to access it via the external route. From the application, click on "Sign in" link at the top right hand corner.  You should be brought to the RH SSO login, login with the credentials: user1/pass
 
 You should now be able to add products to your cart and complete the checkout process.
 
