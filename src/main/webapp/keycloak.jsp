@@ -3,4 +3,4 @@ String json = "{ \"realm\": \"eap\", \"auth-server-url\": \"https://keycloak-eap
 response.getWriter().write(json);
 response.getWriter().flush();
 response.getWriter().close();
-<%
+%>
