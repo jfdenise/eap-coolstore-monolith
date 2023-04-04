@@ -4,7 +4,6 @@ metadata:
   name: eap-sso
   labels:
     app: sso
-  namespace: eap
 spec:
   instances: 1
   externalAccess:

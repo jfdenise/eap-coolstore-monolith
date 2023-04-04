@@ -6,5 +6,3 @@ spec:
   addressName: topic.orders
   queueName: topic/orders
   routingType: multicast
-  user: Q8twbO9U
-  password: Mf7L1Sj9

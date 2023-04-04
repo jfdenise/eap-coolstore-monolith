@@ -5,32 +5,46 @@ This repository has the complete coolstore monolith built as a Java EE 7 applica
 ## Pre requisite
 
 * OpenShift 4.12 with cluster admin access
+* OpenShift CLI, logged into cluster with cluster admin access
 
-## Deploy RH SSO
+## Create project
 
-Install RH SSO operator and deploy RH SSO instance with sso-instance.yml, then sso-realm.yml, sso-client.yml, and sso-user.yml
+`oc new-project eap`
+
+## Deploy RH SSO operator
+
+`oc apply -f sso-operator.yml`
+
+## Deploy RH SSO instance
+
+`oc apply -f sso-instance.yml`
+
+## Configure RH SSO
+
+`oc apply -f sso-config.yml`
+
 
 Update keycloak.json
 
 ## Deploy postgreSQL database
 
-Deploy postgres with following fields
+`oc apply -f psql.yml`
 
-DATABASE: "postgresDB"
-NAME: "postgresql"
-USERNAME: "postgresDB"
-PASSWORD: "postgresPW"
+## Install Active MQ broker operator
 
-## Active MQ broker
+`oc apply -f amq-broker-operator.yml`
 
-Install "Red Hat Integration - AMQ Broker for RHEL 8"
+## Create and configure Active MQ broker instance
 
-Creake Broker instance using amq-deploy.yml
+`oc apply -f amq-deploy.yml`
+
+`oc apply -f amq-topic.yml`
 
 ## Deploy application
 
 Create config map from cm.yaml
 
-Deploy EA74 helm chart with helm.yml
+`oc apply -f cm.yml`
 
-cat /opt/eap/standalone/configuration/standalone-openshift.xml
+Deploy EA74 helm chart with helm.yml as config
+

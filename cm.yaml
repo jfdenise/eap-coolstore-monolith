@@ -17,7 +17,6 @@ data:
   MQ_SERVICE_PREFIX_MAPPING: "eap74-amq7=MQ"
   EAP74_AMQ_TCP_SERVICE_HOST: "eap74-amq7-hdls-svc.amq3.svc.cluster.local"
   EAP74_AMQ_TCP_SERVICE_PORT: "61616"
-  MQ_USERNAME: "Mf7L1Sj9"
-  MQ_PASSWORD: "Q8twbO9U"
+
   MQ_TOPICS: "orders"
   AMQ_JNDI: "java:/eap74-amq7/ConnectionFactory"

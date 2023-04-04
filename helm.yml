@@ -32,6 +32,17 @@ deploy:
   envFrom:
     - configMapRef:
         name: eap-config
+  env:
+    - valueFrom:
+        secretKeyRef:
+          key: AMQ_USER
+          name: eap74-amq7-credentials-secret
+      name: MQ_USERNAME
+      - valueFrom:
+        secretKeyRef:
+          key: AMQ_PASSWORD
+          name: eap74-amq7-credentials-secret
+      name: MQ_PASSWORD
   route:
     enabled: true
     tls:
