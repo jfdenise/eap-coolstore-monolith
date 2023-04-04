@@ -26,12 +26,8 @@ angular.element(document).ready(function () {
             });
         } else {
             auth.ssoEnabled = true;
-            var keycloakConfig = {
-                realm: 'eap',
-                clientId: 'eap-app'
-            }
-            keycloakConfig.url = process.env['KEYCLOAK_URL']
-            var keycloakAuth = new Keycloak(keycloakConfig);
+            var keycloakAuth = new Keycloak('keycloak.jsp');
+
             auth.loggedIn = false;
 
             auth.login = function () {

@@ -20,3 +20,4 @@ data:
 
   MQ_TOPICS: "orders"
   AMQ_JNDI: "java:/eap74-amq7/ConnectionFactory"
+  KEYCLOAK_URL: "https://keycloak-eap.apps.cluster-jzljn.jzljn.sandbox622.opentlc.com/auth"
