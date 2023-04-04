@@ -15,7 +15,7 @@ import weblogic.i18n.logging.NonCatalogLogger;
 @MessageDriven(name = "OrderServiceMDB", activationConfig = {
 	@ActivationConfigProperty(propertyName = "destinationLookup", propertyValue = "topic/orders"),
 	@ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Topic"),
-	@ActivationConfigProperty(propertyName = "destination", propertyValue = "java:/topic/orders"),
+	@ActivationConfigProperty(propertyName = "destination", propertyValue = "java:/orders"),
 	@ActivationConfigProperty(propertyName = "acknowledgeMode", propertyValue = "Auto-acknowledge")})
 public class OrderServiceMDB implements MessageListener { 
 
