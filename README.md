@@ -26,7 +26,7 @@ Wait for RH Operator to be deployed.
 `oc apply -f sso-config.yml`
 
 
-Run `oc get route keycloak` and update KEYCLOAK_URL value is cm.yaml with correct route for SSO, may take a few attempts
+Run `oc get route keycloak` and update KEYCLOAK_URL value in cm.yaml with correct route for SSO, may take a few attempts for route to be created.
 
 
 ## Deploy postgreSQL database
@@ -51,7 +51,10 @@ Create config map from cm.yaml
 
 `oc apply -f cm.yaml`
 
-Deploy EA74 helm chart with helm.yml as config
+From the developer UI, click on "+Add", then "Helm Chart", and select the "Eap74" Helm chart.
+
+
+Paste the contents of "helm.yml" as the config.
 
 ## Testing the application
 
