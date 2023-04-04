@@ -53,3 +53,9 @@ Create config map from cm.yaml
 
 Deploy EA74 helm chart with helm.yml as config
 
+## Testing the application
+
+Once the application is running you should be able to access it via the external route. From the application, click on "Sign in" link at the top right hand corner.  You should be brought to the RH SSO login, login as user1/pass
+
+You should now be able to add products to your cart and complete the checkout process.
+
