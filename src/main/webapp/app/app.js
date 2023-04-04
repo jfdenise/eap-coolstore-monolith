@@ -26,11 +26,12 @@ angular.element(document).ready(function () {
             });
         } else {
             auth.ssoEnabled = true;
-            var keycloakAuth = new Keycloak({
-                url: 'https://keycloak-eap.apps.cluster-jzljn.jzljn.sandbox622.opentlc.com/auth',
+            var keycloakConfig = {
                 realm: 'eap',
                 clientId: 'eap-app'
-            });
+            }
+            keycloakConfig.url = process.env['KEYCLOAK_URL']
+            var keycloakAuth = new Keycloak();
             auth.loggedIn = false;
 
             auth.login = function () {
