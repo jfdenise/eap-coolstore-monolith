@@ -26,7 +26,14 @@ angular.element(document).ready(function () {
             });
         } else {
             auth.ssoEnabled = true;
-            var keycloakAuth = new Keycloak('keycloak.json');
+            var keycloakAuth = new Keycloak({
+                "realm": "eap",
+                "auth-server-url": "https://keycloak-eap.apps.cluster-jzljn.jzljn.sandbox622.opentlc.com/auth/",
+                "ssl-required": "external",
+                "resource": "eap-app",
+                "public-client": true,
+                "confidential-port": 0
+            });
             auth.loggedIn = false;
 
             auth.login = function () {
