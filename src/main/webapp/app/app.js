@@ -31,7 +31,7 @@ angular.element(document).ready(function () {
                 clientId: 'eap-app'
             }
             keycloakConfig.url = process.env['KEYCLOAK_URL']
-            var keycloakAuth = new Keycloak();
+            var keycloakAuth = new Keycloak(keycloakConfig);
             auth.loggedIn = false;
 
             auth.login = function () {
