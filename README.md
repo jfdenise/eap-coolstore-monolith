@@ -17,6 +17,8 @@ This repository has the complete coolstore monolith built as a Java EE 7 applica
 
 ## Deploy RH SSO instance
 
+Wait for RH Operator to be deployed.
+
 `oc apply -f sso-instance.yml`
 
 ## Configure RH SSO
@@ -24,7 +26,7 @@ This repository has the complete coolstore monolith built as a Java EE 7 applica
 `oc apply -f sso-config.yml`
 
 
-Run `oc get route keycloak` and update KEYCLOAK_URL value is cm.yaml with correct route for SSO
+Run `oc get route keycloak` and update KEYCLOAK_URL value is cm.yaml with correct route for SSO, may take a few attempts
 
 
 ## Deploy postgreSQL database
@@ -36,6 +38,8 @@ Run `oc get route keycloak` and update KEYCLOAK_URL value is cm.yaml with correc
 `oc apply -f amq-broker-operator.yml`
 
 ## Create and configure Active MQ broker instance
+
+Wait for AMQ operator to be running.
 
 `oc apply -f amq-deploy.yml`
 
