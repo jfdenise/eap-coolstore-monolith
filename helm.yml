@@ -38,7 +38,7 @@ deploy:
           key: AMQ_USER
           name: eap74-amq7-credentials-secret
       name: MQ_USERNAME
-      - valueFrom:
+    - valueFrom:
         secretKeyRef:
           key: AMQ_PASSWORD
           name: eap74-amq7-credentials-secret
