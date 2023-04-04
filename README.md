@@ -24,7 +24,8 @@ This repository has the complete coolstore monolith built as a Java EE 7 applica
 `oc apply -f sso-config.yml`
 
 
-Update keycloak.json
+Run `oc get route keycloak` and update KEYCLOAK_URL value is cm.yaml with correct route for SSO
+
 
 ## Deploy postgreSQL database
 
@@ -44,7 +45,7 @@ Update keycloak.json
 
 Create config map from cm.yaml
 
-`oc apply -f cm.yml`
+`oc apply -f cm.yaml`
 
 Deploy EA74 helm chart with helm.yml as config
 

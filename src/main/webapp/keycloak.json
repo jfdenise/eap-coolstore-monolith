@@ -1,8 +1,0 @@
-{
-  "realm": "eap",
-  "auth-server-url": "https://keycloak-eap.apps.cluster-jzljn.jzljn.sandbox622.opentlc.com/auth/",
-  "ssl-required": "external",
-  "resource": "eap-app",
-  "public-client": true,
-  "confidential-port": 0
-}
