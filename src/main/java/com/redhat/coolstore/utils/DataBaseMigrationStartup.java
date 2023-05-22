@@ -3,12 +3,12 @@ package com.redhat.coolstore.utils;
 import org.flywaydb.core.Flyway;
 import org.flywaydb.core.api.FlywayException;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.Resource;
-import javax.ejb.Singleton;
-import javax.ejb.Startup;
-import javax.ejb.TransactionManagement;
-import javax.ejb.TransactionManagementType;
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.Resource;
+import jakarta.ejb.Singleton;
+import jakarta.ejb.Startup;
+import jakarta.ejb.TransactionManagement;
+import jakarta.ejb.TransactionManagementType;
 import javax.inject.Inject;
 import javax.sql.DataSource;
 import java.util.logging.Level;
@@ -33,7 +33,9 @@ public class DataBaseMigrationStartup {
 
 
         try {
+            if(logger != null) {
             logger.info("Initializing/migrating the database using FlyWay");
+            }
             Flyway flyway = new Flyway();
             flyway.setDataSource(dataSource);
             flyway.baseline();

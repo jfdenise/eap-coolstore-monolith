@@ -56,6 +56,7 @@ public class ShoppingCartItem implements Serializable {
 		
 	public OrderItem toOrderItem() {
 		OrderItem oi = new OrderItem();
+                oi.setId(System.currentTimeMillis());
 		oi.setQuantity(this.getQuantity());
 		oi.setProductId(this.product.getItemId());
 		return oi;
